@@ -66,7 +66,7 @@ namespace FusionCoreX86
         private static void ThemeCommand(string input)
         {
                 string ThemeText = input.Substring(6);
-            if (ThemeText == "hacker")
+            if (ThemeText == "blackhat")
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.BackgroundColor = ConsoleColor.Black;
@@ -77,6 +77,11 @@ namespace FusionCoreX86
                 Console.BackgroundColor = ConsoleColor.Black;
             }
             else if (ThemeText == "lightmode")
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.White;
+            }
+            else if (ThemeText == "whitehat")
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = ConsoleColor.White;
