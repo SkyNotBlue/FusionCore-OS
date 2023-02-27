@@ -70,21 +70,29 @@ namespace FusionCoreX86
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.BackgroundColor = ConsoleColor.Black;
+                Console.Clear();
+                ConsInit.FusionCoreConsole();
             }
             else if (ThemeText == "darkmode")
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Black;
+                Console.Clear();
+                ConsInit.FusionCoreConsole();
             }
             else if (ThemeText == "lightmode")
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = ConsoleColor.White;
+                Console.Clear();
+                ConsInit.FusionCoreConsole();
             }
             else if (ThemeText == "whitehat")
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = ConsoleColor.White;
+                Console.Clear();
+                ConsInit.FusionCoreConsole();
             }
         }
     }
