@@ -10,12 +10,12 @@ namespace FusionCoreX86
 
         protected override void BeforeRun()
         {
-            Console.WriteLine("FusionCore has booted successfully.");
-            Console.WriteLine("FusionCoreX86 Version b0.0.1 Codename Stanley");
+            Console.WriteLine("Booting FusionCore...");
         }
 
         protected override void Run()
         {
+            Console.Clear();
             CoreConsole ConsInit = new CoreConsole();
             ConsInit.FusionCoreConsole();
         }

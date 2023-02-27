@@ -7,8 +7,12 @@ namespace FusionCoreX86
 {
     internal class CoreConsole
     {
+        CoreConsole ConsInit = new CoreConsole();
         internal void FusionCoreConsole()
         {
+            StartPoint:
+            Console.WriteLine("FusionCore has booted successfully.");
+            Console.WriteLine("FusionCoreX86 Version b0.0.1 Codename Stanley");
             var loop = true;
             while (loop = true)
             {
@@ -22,6 +26,11 @@ namespace FusionCoreX86
                 else if (input.StartsWith("theme "))
                 {
                     ThemeCommand(input);
+                }
+                else if (input.StartsWith("clear "))
+                {
+                    Console.Clear();
+                    goto StartPoint;
                 }
                 else
                 {
@@ -37,6 +46,23 @@ namespace FusionCoreX86
             string echoText = input.Substring(5);
             Console.WriteLine(echoText);
             }
+        private static void ClearCommand(string input)
+        {
+            string clearText = input.Substring(6);
+            if (clearText == "reset")
+            {
+                ConsInit.FusionCoreConsole();
+                Console.Clear();
+            }
+            else if (clearText == " ")
+            {
+                Console.Clear();
+            }
+            else if (clearText == "")
+            {
+                Console.Clear();
+            }
+        }
         private static void ThemeCommand(string input)
         {
                 string ThemeText = input.Substring(6);
