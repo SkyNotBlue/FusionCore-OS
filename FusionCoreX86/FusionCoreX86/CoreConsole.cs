@@ -9,20 +9,24 @@ namespace FusionCoreX86
     {
         internal void FusionCoreConsole()
         {
-            Console.Write("Ready. ");
-            var input = Console.ReadLine();
+            var loop = true;
+            while (loop = true)
+            {
+                Console.Write("Ready. ");
+                var input = Console.ReadLine();
 
-            if (input.StartsWith("echo "))
-            {
-                EchoCommand(input);
-            }
-            else if (input.StartsWith("theme "))
-            {
-                ThemeCommand(input);
-            }
-            else
-            {
-                Console.WriteLine("Invalid command.");
+                if (input.StartsWith("echo "))
+                {
+                    EchoCommand(input);
+                }
+                else if (input.StartsWith("theme "))
+                {
+                    ThemeCommand(input);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid command.");
+                }
             }
 
 
@@ -36,17 +40,21 @@ namespace FusionCoreX86
         private static void ThemeCommand(string input)
         {
                 string ThemeText = input.Substring(6);
-            if (ThemeText == "Hacker")
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.BackgroundColor = ConsoleColor.Black;
-                }
-                else _ = (ThemeText == "Darkmode");
-                {
-                    public ConsoleColor Background { get; set; }
-
-
-                }
+            if (ThemeText == "hacker")
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.BackgroundColor = ConsoleColor.Black;
+            }
+            else if (ThemeText == "darkmode")
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Black;
+            }
+            else if (ThemeText == "lightmode")
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.White;
+            }
         }
     }
 }
