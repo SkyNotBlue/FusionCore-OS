@@ -7,7 +7,6 @@ namespace FusionCoreX86
 {
     internal class CoreConsole
     {
-        CoreConsole ConsInit = new CoreConsole();
         internal void FusionCoreConsole()
         {
             StartPoint:
@@ -32,6 +31,18 @@ namespace FusionCoreX86
                     Console.Clear();
                     goto StartPoint;
                 }
+                else if (input.StartsWith("about"))
+                {
+                    
+                }
+                else if (input.StartsWith("about"))
+                {
+                    Console.WriteLine("FusionCore Beta Version b0.0.2a. Codename Stanley.");
+                    Console.WriteLine("(C) 2023 Reece Andersen. All source code under an MIT license.");
+                    Console.WriteLine("echo - Echo's the text after it to the console.");
+                    Console.WriteLine("theme - Changes the theme. For more help for the theme command, type 'help theme.");
+                    Console.WriteLine("clear - Clears the screen of all clutter.");
+                }
                 else
                 {
                     Console.WriteLine("Invalid command.");
@@ -48,52 +59,45 @@ namespace FusionCoreX86
             }
         private static void ClearCommand(string input)
         {
+            CoreConsole console = new CoreConsole();
             string clearText = input.Substring(6);
-            if (clearText == "reset")
-            {
-                ConsInit.FusionCoreConsole();
-                Console.Clear();
-            }
-            else if (clearText == " ")
-            {
-                Console.Clear();
-            }
-            else if (clearText == "")
-            {
-                Console.Clear();
-            }
+             Console.Clear();
+
         }
         private static void ThemeCommand(string input)
         {
-                string ThemeText = input.Substring(6);
+            CoreConsole console = new CoreConsole();
+             string ThemeText = input.Substring(6);
             if (ThemeText == "blackhat")
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.Clear();
-                ConsInit.FusionCoreConsole();
+                console.FusionCoreConsole();
             }
             else if (ThemeText == "darkmode")
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.Clear();
-                ConsInit.FusionCoreConsole();
+                console.FusionCoreConsole();
             }
-            else if (ThemeText == "lightmode")
+              else if (ThemeText == "lightmode")
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.Clear();
-                ConsInit.FusionCoreConsole();
+                console.FusionCoreConsole();
+
             }
-            else if (ThemeText == "whitehat")
+              else if (ThemeText == "whitehat")
             {
                 Console.ForegroundColor = ConsoleColor.Black;
-                Console.BackgroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Green;
                 Console.Clear();
-                ConsInit.FusionCoreConsole();
+                console.FusionCoreConsole();
+
             }
-        }
+          }
     }
 }
