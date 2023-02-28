@@ -17,7 +17,7 @@ There you go it should be compiled. </br>
 first, get a flash drive.</br>
 Flash the contents of the ISO to the flash drive using a tool like Ballena Flasher. </br>
 Now, plug it into your computer, then press the boot menu key and choose your flash drive. </br>
-There you go! You did it! </b>
-<b>VMs:</b>
-Coming Soon.
+There you go! You did it! </b> </br>
+<b>VMs:</b> </br>
+Coming Soon. </br>
 Feel free to use the source code for what ever you want, as long as you follow the license in license.md. Have fun.
