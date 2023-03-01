@@ -13,7 +13,7 @@ namespace FusionCoreX86
             Console.WriteLine("FusionCore has booted successfully.");
             Console.WriteLine("FusionCoreX86 Version b0.0.2a Codename Stanley");
             var loop = true;
-            while (loop = true)
+            while (loop == true)
             {
                 Console.Write("Ready. ");
                 var input = Console.ReadLine();
@@ -33,11 +33,22 @@ namespace FusionCoreX86
                 }
                 else if (input.StartsWith("about"))
                 {
-                    Console.WriteLine("FusionCore Beta Version b0.0.2a. Codename Stanley.");
-                    Console.WriteLine("(C) 2023 Reece Andersen. All source code under an MIT license.");
-                    Console.WriteLine("echo - Echo's the text after it to the console.");
-                    Console.WriteLine("theme - Changes the theme. For more help for the theme command, type 'about theme.");
-                    Console.WriteLine("clear - Clears the screen of all clutter.");
+                    if (input.StartsWith("about theme"))
+                    {
+                        Console.WriteLine("There are 4 themes:");
+                        Console.WriteLine("darkmode - default theme.");
+                        Console.WriteLine("lightmode - inverted darkmode.");
+                        Console.WriteLine("blackhat - green text, black background.");
+                        Console.WriteLine("whitehat - blackhat but inverted.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("FusionCore Beta Version b0.0.2a. Codename Stanley.");
+                        Console.WriteLine("(C) 2023 Reece Andersen. All source code under an MIT license.");
+                        Console.WriteLine("echo - Echo's the text after it to the console.");
+                        Console.WriteLine("theme - Changes the theme. For more help for the theme command, type 'about theme.");
+                        Console.WriteLine("clear - Clears the screen of all clutter.");
+                    }
                 }
                 else if (input.StartsWith("about theme"))
                 {
