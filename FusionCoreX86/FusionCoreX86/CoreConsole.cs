@@ -9,9 +9,10 @@ namespace FusionCoreX86
     {
         internal void FusionCoreConsole()
         {
+            var CoreVer = "b0.2B";
             StartPoint:
             Console.WriteLine("FusionCore has booted successfully.");
-            Console.WriteLine("FusionCoreX86 Version b0.0.2a Codename Stanley");
+            Console.WriteLine("FusionCoreX86 )" + CoreVer + "Codename Stanley");
             var loop = true;
             while (loop == true)
             {
@@ -43,7 +44,7 @@ namespace FusionCoreX86
                     }
                     else
                     {
-                        Console.WriteLine("FusionCore Beta Version b0.0.2a. Codename Stanley.");
+                        Console.WriteLine("FusionCore Beta Version" + CoreVer + "Codename Stanley.");
                         Console.WriteLine("(C) 2023 Reece Andersen. All source code under an MIT license.");
                         Console.WriteLine("echo - Echo's the text after it to the console.");
                         Console.WriteLine("theme - Changes the theme. For more help for the theme command, type 'about theme.");
